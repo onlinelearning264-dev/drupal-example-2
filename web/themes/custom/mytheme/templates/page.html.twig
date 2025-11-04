@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head-placeholder token="{{ placeholder_token }}">
+    <title>{{ head_title }}</title>
+    {{ head }}
+    {{ styles }}
+    {{ scripts }}
+  </head>
+  <body class="{{ attributes.class }}">
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <div class="container">
+          {{ page.header }}
+        </div>
+      </header>
+
+      {% if page.slider %}
+        <section class="site-slider">
+          <div class="container">
+            {{ page.slider }}
+          </div>
+        </section>
+      {% endif %}
+
+      <main class="site-main">
+        <div class="container layout-two-column">
+          <div class="main-content">
+            {{ page.content }}
+          </div>
+          {% if page.sidebar_first %}
+            <aside class="sidebar">
+              {{ page.sidebar_first }}
+            </aside>
+          {% endif %}
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container">
+          {{ page.footer }}
+        </div>
+      </footer>
+
+    </div>
+  </body>
+</html>

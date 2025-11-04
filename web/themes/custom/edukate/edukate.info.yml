@@ -1,0 +1,20 @@
+name: Edukate
+type: theme
+description: 'Theme giáo dục tùy chỉnh'
+core_version_requirement: ^11
+base theme: classy
+package: Custom
+libraries:
+  - edukate/global
+regions:
+  topbar: Topbar
+  navbar: Navbar
+  header: Header
+  about: About
+  feature: Feature
+  courses: Courses
+  team: Team
+  testimonial: Testimonial
+  contact: Contact
+  footer: Footer
+  backtotop: Backtotop

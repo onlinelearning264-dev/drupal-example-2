@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head-placeholder token="{{ placeholder_token }}">
+    <title>{{ head_title }}</title>
+    {{ head }}
+    {{ styles }}
+    {{ scripts }}
+  </head>
+  <body>
+
+    <div class="page-wrapper">
+
+      {% if page.topbar %}
+        <div class="region-topbar">{{ page.topbar }}</div>
+      {% endif %}
+
+      {% if page.header %}
+        <header class="region-header">{{ page.header }}</header>
+      {% endif %}
+
+      {% if page.slider %}
+        <section class="region-slider">{{ page.slider }}</section>
+        <section class="region-slider">{{ attach_library('edukate/owl-carousel') }}</section>
+      {% endif %}
+
+      {% if page.about %}
+        <section class="region-about">{{ page.about }}</section>
+      {% endif %}
+
+      {% if page.feature %}
+        <section class="region-feature">{{ page.feature }}</section>
+      {% endif %}
+
+      {% if page.courses %}
+        <section class="region-courses">{{ page.courses }}</section>
+      {% endif %}
+
+      {% if page.instructors %}
+        <section class="region-instructors">{{ page.instructors }}</section>
+      {% endif %}
+
+      {% if page.testimonial %}
+        <section class="region-testimonial">{{ page.testimonial }}</section>
+      {% endif %}
+
+      {% if page.contact %}
+        <section class="region-contact">{{ page.contact }}</section>
+      {% endif %}
+
+      {% if page.footer %}
+        <footer class="region-footer">{{ page.footer }}</footer>
+      {% endif %}
+
+    </div>
+
+  </body>
+</html>

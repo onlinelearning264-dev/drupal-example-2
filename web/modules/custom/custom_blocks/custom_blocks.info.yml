@@ -1,0 +1,5 @@
+name: 'Custom Blocks'
+type: module
+description: 'Khối HTML tùy chỉnh'
+core_version_requirement: ^11
+package: Custom

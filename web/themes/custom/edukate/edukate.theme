@@ -1,0 +1,14 @@
+<?php 
+
+function edukate_preprocess_block(&$variables) {
+  // Kiểm tra plugin_id của block content
+  if ($variables['plugin_id'] === 'block_content:topbar_description') {
+    $block = $variables['elements']['#block_content'];
+
+    // Inject từng field vào biến Twig
+    $variables['phone'] = $block->get('field_phone')->view();
+    $variables['email'] = $block->get('field_email')->view();
+    $variables['facebook'] = $block->get('field_facebook')->view();
+    $variables['youtube'] = $block->get('field_youtube')->view();
+  }
+}

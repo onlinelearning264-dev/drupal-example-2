@@ -1,0 +1,11 @@
+name: MyTheme
+type: theme
+core_version_requirement: ^11
+base theme: classy
+regions:
+  header: Header
+  slider: Slider
+  content: Content
+  footer: Footer
+libraries:
+  - mytheme/global-styling
