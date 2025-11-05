@@ -1,0 +1,35 @@
+# Route hiển thị danh sách học sinh
+student_manager.list:
+  path: '/admin/students'
+  defaults:
+    _controller: '\Drupal\student_manager\Controller\StudentController::list'
+    _title: 'Danh sách học sinh'
+  requirements:
+    _permission: 'access content'
+
+# Route thêm học sinh
+student_manager.add:
+  path: '/admin/students/add'
+  defaults:
+    _form: '\Drupal\student_manager\Form\StudentForm'
+    _title: 'Thêm học sinh'
+  requirements:
+    _permission: 'access content'
+
+# Route sửa học sinh
+student_manager.edit:
+  path: '/admin/students/edit/{id}'
+  defaults:
+    _form: '\Drupal\student_manager\Form\StudentForm'
+    _title: 'Sửa học sinh'
+  requirements:
+    _permission: 'access content'
+
+# Route xóa học sinh
+student_manager.delete:
+  path: '/admin/students/delete/{id}'
+  defaults:
+    _controller: '\Drupal\student_manager\Controller\StudentController::delete'
+    _title: 'Xóa học sinh'
+  requirements:
+    _permission: 'access content'

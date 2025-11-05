@@ -1,0 +1,15 @@
+# student_manager.admin:
+#   title: 'Quản lý học sinh' # title: Tên hiển thị trong menu
+#   description: 'Xem, thêm, sửa, xóa học sinh' # description: Mô tả ngắn
+#   route_name: student_manager.list # route_name: Route bạn đã định nghĩa trong student_manager.routing.yml (ví dụ: student_manager.list)
+#   parent: system.admin_content # parent: Vị trí menu cha. system.admin_content sẽ đặt nó trong mục Content. Nếu bạn muốn nó nằm cạnh Help, dùng system.admin để đặt ở cấp cao hơn
+#   weight: 20 # weight: Thứ tự hiển thị (số nhỏ hơn sẽ lên trước)
+
+# Ví dụ: đặt cạnh Help
+student_manager.top_level:
+  title: 'Quản lý học sinh'
+  description: 'Quản lý danh sách học sinh'
+  route_name: student_manager.list
+  parent: system.admin
+  weight: 20
+

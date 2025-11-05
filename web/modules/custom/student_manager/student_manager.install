@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * Tạo bảng cơ sở dữ liệu khi cài module.
+ */
+function student_manager_schema() {
+  $schema['student'] = [
+    'description' => 'Bảng lưu thông tin học sinh',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',             // Tự tăng
+        'not null' => TRUE,
+      ],
+      'name' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+      'age' => [
+        'type' => 'int',
+        'not null' => TRUE,
+      ],
+      'class' => [
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+  return $schema;
+}
+
+/**
+ * Xóa bảng khi gỡ module.
+ */
+function student_manager_uninstall() {
+  \Drupal::database()->schema()->dropTable('student');
+}

@@ -1,0 +1,8 @@
+# Đây là file khai báo thông tin cơ bản của module
+name: 'Student Manager'                  # Tên module
+type: module                             # Loại: module
+description: 'Quản lý thông tin học sinh'
+core_version_requirement: ^11            # Yêu cầu Drupal 11
+package: Custom                          # Nhóm hiển thị trong admin
+dependencies:
+  - drupal:system                        # Phụ thuộc vào module hệ thống
